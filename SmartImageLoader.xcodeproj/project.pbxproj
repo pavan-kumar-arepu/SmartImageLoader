@@ -51,6 +51,12 @@
 		0BC344D62BE6D348005C71BC /* SmartImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				0BC344EA2BE6D490005C71BC /* Models */,
+				0BC344E92BE6D487005C71BC /* ViewModels */,
+				0BC344E82BE6D47F005C71BC /* Views */,
+				0BC344E72BE6D46A005C71BC /* Utils */,
+				0BC344E62BE6D460005C71BC /* NetworkLayer */,
+				0BC344E52BE6D44E005C71BC /* DataLayer */,
 				0BC344D72BE6D348005C71BC /* SmartImageLoaderApp.swift */,
 				0BC344D92BE6D348005C71BC /* ContentView.swift */,
 				0BC344DB2BE6D34B005C71BC /* Assets.xcassets */,
@@ -65,6 +71,48 @@
 				0BC344DE2BE6D34B005C71BC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0BC344E52BE6D44E005C71BC /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		0BC344E62BE6D460005C71BC /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		0BC344E72BE6D46A005C71BC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0BC344E82BE6D47F005C71BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BC344E92BE6D487005C71BC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0BC344EA2BE6D490005C71BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
