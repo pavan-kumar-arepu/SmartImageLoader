@@ -42,11 +42,5 @@ struct WebViewModal: View {
                 isLoading = false
             }
         }
-        .navigationBarTitle(Text("WebView"), displayMode: .inline)
-        .navigationBarItems(trailing: Button(action: {
-            showModal = false
-        }) {
-            Image(systemName: "xmark")
-        })
     }
 }

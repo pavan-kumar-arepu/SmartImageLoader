@@ -35,7 +35,7 @@ struct MediaCoverageListView: View {
                                 // Open the webview modal
                                 isWebViewPresented = true
                             }) {
-                                Image("who")
+                                Image("meditation")
                                     .resizable()
                                     .frame(width: 50, height: 50)
                             }

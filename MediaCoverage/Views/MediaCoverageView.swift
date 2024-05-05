@@ -30,7 +30,7 @@ struct MediaCoverageView: View {
                 }
             }
             .padding(8)
-            .background(Color.gray.opacity(0.1))
+            .background(Color.blue.opacity(0.2))
             .cornerRadius(8)
         }
         .onAppear {
