@@ -39,6 +39,7 @@ struct ContentView: View {
     }
 }
 
+/*
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         // Create a mock MediaCoverageViewModel for preview
@@ -76,3 +77,5 @@ struct ContentView_Previews: PreviewProvider {
         return ContentView(viewModel: mockViewModel)
     }
 }
+
+*/
