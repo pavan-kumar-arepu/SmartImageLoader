@@ -5,27 +5,44 @@
 //  Created by Pavankumar Arepu on 05/05/24.
 //
 
+// MediaCoverageService.swift
+
 import Foundation
 
 class MediaCoverageService {
-    private let networkManager = NetworkManager.shared
+    private let networkService: NetworkService
+    private let cacheService: CacheService
+    
+    init(networkService: NetworkService = NetworkManager.shared, cacheService: CacheService = CacheManager.shared) {
+        self.networkService = networkService
+        self.cacheService = cacheService
+    }
     
     func fetchMediaCoverages(completion: @escaping (Result<[MediaCoverage], Error>) -> Void) {
-        guard let url = URL(string: "https://acharyaprashant.org/api/v2/content/misc/media-coverages?limit=100") else {
-            completion(.failure(NetworkError.invalidURL))
-            return
-        }
-        networkManager.fetchData(from: url) { result in
-            switch result {
-            case .success(let data):
-                do {
-                    let mediaCoverages = try JSONDecoder().decode([MediaCoverage].self, from: data)
-                    completion(.success(mediaCoverages))
-                } catch {
+        // Try to fetch media coverages from cache first
+        cacheService.getImage(for: "mediaCoverages") { data in
+            if let data = data,
+               let mediaCoverages = try? JSONDecoder().decode([MediaCoverage].self, from: data) {
+                completion(.success(mediaCoverages))
+                return
+            }
+            
+            // If not found in cache, fetch from API
+            // TODO: Will create constants file later..to keep all app constants in single file
+            self.networkService.fetchData(from: URL(string: "https://acharyaprashant.org/api/v2/content/misc/media-coverages?limit=100")!) { result in
+                switch result {
+                case .success(let data):
+                    do {
+                        let mediaCoverages = try JSONDecoder().decode([MediaCoverage].self, from: data)
+                        // Cache the fetched media coverages
+                        self.cacheService.cacheImage(data: data, for: "mediaCoverages")
+                        completion(.success(mediaCoverages))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                case .failure(let error):
                     completion(.failure(error))
                 }
-            case .failure(let error):
-                completion(.failure(error))
             }
         }
     }

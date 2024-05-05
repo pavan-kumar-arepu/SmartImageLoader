@@ -7,7 +7,12 @@
 
 import Foundation
 
-class NetworkManager {
+// Protocol for the network layer
+protocol NetworkService {
+    func fetchData(from url: URL, completion: @escaping (Result<Data, Error>) -> Void)
+}
+
+class NetworkManager: NetworkService {
     static let shared = NetworkManager()
     
     private init() {}
