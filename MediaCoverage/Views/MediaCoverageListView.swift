@@ -11,16 +11,17 @@ import SwiftUI
 struct MediaCoverageListView: View {
     @ObservedObject var viewModel: MediaCoverageViewModel
     @State private var isNavigationBarHidden = true
-
+    @State private var isWebViewPresented = false
+    
     var body: some View {
         
         NavigationView {
             ZStack {
                 // Background gradient
-                                LinearGradient(gradient: Gradient(colors: [.orange, .green]),
-                                               startPoint: .top,
-                                               endPoint: .bottom)
-                                .edgesIgnoringSafeArea(.vertical)
+                LinearGradient(gradient: Gradient(colors: [.orange, .green]),
+                               startPoint: .top,
+                               endPoint: .bottom)
+                .edgesIgnoringSafeArea(.vertical)
                 
                 ScrollView {
                     
@@ -29,6 +30,18 @@ struct MediaCoverageListView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(height: 200)
                         .clipped()
+                        .overlay(
+                            Button(action: {
+                                // Open the webview modal
+                                isWebViewPresented = true
+                            }) {
+                                Image("who")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            }
+                                .padding(),
+                            alignment: .topTrailing
+                        )
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 10) {
                         ForEach(viewModel.mediaCoverages) { mediaCoverage in
                             MediaCoverageView(viewModel: viewModel, mediaCoverage: mediaCoverage)
@@ -41,6 +54,9 @@ struct MediaCoverageListView: View {
                 }
             }
             .navigationBarTitle("Acharya Prashant", displayMode: .large)
+            .sheet(isPresented: $isWebViewPresented) {
+                WebViewModal()
+            }
         }
     }
 }

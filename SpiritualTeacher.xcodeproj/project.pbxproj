@@ -10,6 +10,7 @@
 		0B1CF8052BE7F8D4005D6030 /* MediaCoverageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CF8042BE7F8D4005D6030 /* MediaCoverageViewModel.swift */; };
 		0B1CF8082BE7F8DD005D6030 /* MediaCoverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CF8062BE7F8DD005D6030 /* MediaCoverageView.swift */; };
 		0B1CF8092BE7F8DD005D6030 /* MediaCoverageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CF8072BE7F8DD005D6030 /* MediaCoverageListView.swift */; };
+		0B1CF80B2BE7FD47005D6030 /* WebViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CF80A2BE7FD47005D6030 /* WebViewModal.swift */; };
 		0B287F752BE7878B00A2F689 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B287F742BE7878B00A2F689 /* CacheManager.swift */; };
 		0B287F7B2BE79BD300A2F689 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B287F7A2BE79BD300A2F689 /* Constants.swift */; };
 		0B6329C92BE77F2B00853DFA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6329C82BE77F2B00853DFA /* NetworkManager.swift */; };
@@ -26,6 +27,7 @@
 		0B1CF8042BE7F8D4005D6030 /* MediaCoverageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCoverageViewModel.swift; sourceTree = "<group>"; };
 		0B1CF8062BE7F8DD005D6030 /* MediaCoverageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCoverageView.swift; sourceTree = "<group>"; };
 		0B1CF8072BE7F8DD005D6030 /* MediaCoverageListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCoverageListView.swift; sourceTree = "<group>"; };
+		0B1CF80A2BE7FD47005D6030 /* WebViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModal.swift; sourceTree = "<group>"; };
 		0B287F742BE7878B00A2F689 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		0B287F7A2BE79BD300A2F689 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0B6329C82BE77F2B00853DFA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -51,13 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B9674D02BE7C04700A3A6C1 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		0BC344CB2BE6D348005C71BC = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0B287F7A2BE79BD300A2F689 /* Constants.swift */,
-				0BC344EC2BE6DC68005C71BC /* Resources */,
+				0BC344EC2BE6DC68005C71BC /* Reusable */,
 				0BC344EA2BE6D490005C71BC /* Models */,
 				0BC344E92BE6D487005C71BC /* ViewModels */,
 				0BC344E82BE6D47F005C71BC /* Views */,
@@ -144,12 +139,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		0BC344EC2BE6DC68005C71BC /* Resources */ = {
+		0BC344EC2BE6DC68005C71BC /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				0B9674D02BE7C04700A3A6C1 /* Assets */,
+				0B1CF80A2BE7FD47005D6030 /* WebViewModal.swift */,
 			);
-			path = Resources;
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +220,7 @@
 				0B6329C92BE77F2B00853DFA /* NetworkManager.swift in Sources */,
 				0B1CF8052BE7F8D4005D6030 /* MediaCoverageViewModel.swift in Sources */,
 				0B1CF8092BE7F8DD005D6030 /* MediaCoverageListView.swift in Sources */,
+				0B1CF80B2BE7FD47005D6030 /* WebViewModal.swift in Sources */,
 				0B9674C72BE7B21300A3A6C1 /* ImageLoader.swift in Sources */,
 				0B6329CB2BE77FAE00853DFA /* MediaCoverageService.swift in Sources */,
 				0BC344DA2BE6D348005C71BC /* ContentView.swift in Sources */,
