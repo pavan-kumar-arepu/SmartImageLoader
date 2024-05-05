@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B6329C92BE77F2B00853DFA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6329C82BE77F2B00853DFA /* NetworkManager.swift */; };
+		0B6329CB2BE77FAE00853DFA /* MediaCoverageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6329CA2BE77FAE00853DFA /* MediaCoverageService.swift */; };
 		0BC344D82BE6D348005C71BC /* SmartImageLoaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC344D72BE6D348005C71BC /* SmartImageLoaderApp.swift */; };
 		0BC344DA2BE6D348005C71BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC344D92BE6D348005C71BC /* ContentView.swift */; };
 		0BC344DC2BE6D34B005C71BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC344DB2BE6D34B005C71BC /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0B6329C82BE77F2B00853DFA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0B6329CA2BE77FAE00853DFA /* MediaCoverageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCoverageService.swift; sourceTree = "<group>"; };
 		0BC344D42BE6D348005C71BC /* SpiritualTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiritualTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC344D72BE6D348005C71BC /* SmartImageLoaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartImageLoaderApp.swift; sourceTree = "<group>"; };
 		0BC344D92BE6D348005C71BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		0BC344E52BE6D44E005C71BC /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				0B6329CA2BE77FAE00853DFA /* MediaCoverageService.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B6329C92BE77F2B00853DFA /* NetworkManager.swift in Sources */,
+				0B6329CB2BE77FAE00853DFA /* MediaCoverageService.swift in Sources */,
 				0BC344DA2BE6D348005C71BC /* ContentView.swift in Sources */,
 				0BC345032BE6E014005C71BC /* ImageModel.swift in Sources */,
 				0BC344D82BE6D348005C71BC /* SmartImageLoaderApp.swift in Sources */,
