@@ -56,7 +56,6 @@
 		0B9674D02BE7C04700A3A6C1 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				0B9674D12BE7C04700A3A6C1 /* acharya_prashant.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -91,6 +90,7 @@
 				0BC344D72BE6D348005C71BC /* MediaCoverageApp.swift */,
 				0BC344D92BE6D348005C71BC /* ContentView.swift */,
 				0BC344DB2BE6D34B005C71BC /* Assets.xcassets */,
+				0B9674D12BE7C04700A3A6C1 /* acharya_prashant.png */,
 				0BC344DD2BE6D34B005C71BC /* Preview Content */,
 				0BC344EB2BE6D930005C71BC /* HighLevelDesign.h */,
 			);

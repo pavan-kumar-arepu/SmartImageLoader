@@ -17,22 +17,6 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "newspaper")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
-                .foregroundColor(.blue)
-            
-            Text("Media Coverage App")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding()
-            
-            Text("Welcome to the Media Coverage App!")
-                .font(.body)
-                .multilineTextAlignment(.center)
-                .padding()
-            
             // Use MediaCoverageListView with ViewModel
             MediaCoverageListView(viewModel: MediaCoverageViewModel())
         }

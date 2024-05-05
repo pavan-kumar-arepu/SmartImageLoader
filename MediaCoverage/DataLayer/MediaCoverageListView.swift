@@ -10,35 +10,45 @@ import SwiftUI
 
 struct MediaCoverageListView: View {
     @ObservedObject var viewModel: MediaCoverageViewModel
-    
     @State private var isNavigationBarHidden = true
-    
+
     var body: some View {
-        ScrollView {
-            VStack {
-                // Header Image (AcharyaPrasanth)
-                GeometryReader { geometry in
-                    Image("acharya_prashant.png")
+        
+        NavigationView {
+            ZStack {
+                // Background gradient
+                                LinearGradient(gradient: Gradient(colors: [.orange, .green]),
+                                               startPoint: .top,
+                                               endPoint: .bottom)
+                                .edgesIgnoringSafeArea(.vertical)
+                
+                ScrollView {
+                    
+                    Image("acharya_prashant")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(height: 200) // Adjust height as needed
+                        .frame(height: 200)
                         .clipped()
-                        .offset(y: -geometry.frame(in: .global).minY)
-                        .onAppear {
-                            self.isNavigationBarHidden = geometry.frame(in: .global).minY > 0
+                    LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 10) {
+                        ForEach(viewModel.mediaCoverages) { mediaCoverage in
+                            MediaCoverageView(viewModel: viewModel, mediaCoverage: mediaCoverage)
                         }
-                }
-                
-                // Grid of Media Coverages
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
-                    ForEach(viewModel.mediaCoverages) { mediaCoverage in
-                        MediaCoverageView(viewModel: viewModel, mediaCoverage: mediaCoverage)
+                    }
+                    .padding()
+                    .onAppear {
+                        viewModel.fetchMediaCoverages()
                     }
                 }
-                .padding()
             }
+            .navigationBarTitle("Acharya Prashant", displayMode: .large)
         }
-        .navigationBarTitle("Acharya Prasanth", displayMode: .inline)
-        .navigationBarHidden(isNavigationBarHidden)
     }
 }
+
+struct MediaCoverageListView_Previews: PreviewProvider {
+    static var previews: some View {
+        MediaCoverageListView(viewModel: MediaCoverageViewModel())
+            .previewDisplayName("Media Coverage List")
+    }
+}
+
