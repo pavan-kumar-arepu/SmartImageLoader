@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SmartImageLoaderApp: App {
+struct MediaCoverageApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
