@@ -11,7 +11,8 @@ import SwiftUI
 struct MediaCoverageApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // Inject the MediaCoverageViewModel into ContentView
+            ContentView(viewModel: MediaCoverageViewModel())
         }
     }
 }

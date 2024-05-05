@@ -21,12 +21,15 @@ class NetworkManager: NetworkService {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
+                print("**** APK: Fetch failed ****", #function)
                 return
             }
             guard let data = data else {
+                print("**** APK: No data ****", #function)
                 completion(.failure(NetworkError.noData))
                 return
             }
+            print("APK: Data Received", #function)
             completion(.success(data))
         }.resume()
     }

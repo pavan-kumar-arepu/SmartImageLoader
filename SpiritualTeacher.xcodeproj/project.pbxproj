@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0B287F752BE7878B00A2F689 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B287F742BE7878B00A2F689 /* CacheManager.swift */; };
+		0B287F772BE78E5400A2F689 /* MediaCoverageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B287F762BE78E5400A2F689 /* MediaCoverageViewModel.swift */; };
+		0B287F792BE78E7900A2F689 /* MediaCoverageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B287F782BE78E7900A2F689 /* MediaCoverageListView.swift */; };
 		0B6329C92BE77F2B00853DFA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6329C82BE77F2B00853DFA /* NetworkManager.swift */; };
 		0B6329CB2BE77FAE00853DFA /* MediaCoverageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6329CA2BE77FAE00853DFA /* MediaCoverageService.swift */; };
 		0BC344D82BE6D348005C71BC /* MediaCoverageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC344D72BE6D348005C71BC /* MediaCoverageApp.swift */; };
 		0BC344DA2BE6D348005C71BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC344D92BE6D348005C71BC /* ContentView.swift */; };
 		0BC344DC2BE6D34B005C71BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC344DB2BE6D34B005C71BC /* Assets.xcassets */; };
 		0BC344DF2BE6D34B005C71BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC344DE2BE6D34B005C71BC /* Preview Assets.xcassets */; };
-		0BC345032BE6E014005C71BC /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC345022BE6E014005C71BC /* ImageModel.swift */; };
+		0BC345032BE6E014005C71BC /* MediaCoverageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC345022BE6E014005C71BC /* MediaCoverageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B287F742BE7878B00A2F689 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		0B287F762BE78E5400A2F689 /* MediaCoverageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaCoverageViewModel.swift; path = MediaCoverage/DataLayer/MediaCoverageViewModel.swift; sourceTree = SOURCE_ROOT; };
+		0B287F782BE78E7900A2F689 /* MediaCoverageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediaCoverageListView.swift; path = MediaCoverage/DataLayer/MediaCoverageListView.swift; sourceTree = SOURCE_ROOT; };
 		0B6329C82BE77F2B00853DFA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0B6329CA2BE77FAE00853DFA /* MediaCoverageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCoverageService.swift; sourceTree = "<group>"; };
 		0BC344D42BE6D348005C71BC /* SpiritualTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiritualTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,7 +31,7 @@
 		0BC344DB2BE6D34B005C71BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BC344DE2BE6D34B005C71BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0BC344EB2BE6D930005C71BC /* HighLevelDesign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighLevelDesign.h; sourceTree = "<group>"; };
-		0BC345022BE6E014005C71BC /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		0BC345022BE6E014005C71BC /* MediaCoverageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCoverageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		0BC344E82BE6D47F005C71BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0B287F782BE78E7900A2F689 /* MediaCoverageListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 		0BC344E92BE6D487005C71BC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0B287F762BE78E5400A2F689 /* MediaCoverageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -125,7 +131,7 @@
 		0BC344EA2BE6D490005C71BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0BC345022BE6E014005C71BC /* ImageModel.swift */,
+				0BC345022BE6E014005C71BC /* MediaCoverageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,9 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B6329C92BE77F2B00853DFA /* NetworkManager.swift in Sources */,
+				0B287F792BE78E7900A2F689 /* MediaCoverageListView.swift in Sources */,
 				0B6329CB2BE77FAE00853DFA /* MediaCoverageService.swift in Sources */,
 				0BC344DA2BE6D348005C71BC /* ContentView.swift in Sources */,
-				0BC345032BE6E014005C71BC /* ImageModel.swift in Sources */,
+				0B287F772BE78E5400A2F689 /* MediaCoverageViewModel.swift in Sources */,
+				0BC345032BE6E014005C71BC /* MediaCoverageModel.swift in Sources */,
 				0B287F752BE7878B00A2F689 /* CacheManager.swift in Sources */,
 				0BC344D82BE6D348005C71BC /* MediaCoverageApp.swift in Sources */,
 			);

@@ -43,6 +43,7 @@ struct MediaCoverage: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id
         case title
+        case imageURL = "coverageURL"
         case thumbnail
         case publishedAt
         case publishedBy
@@ -67,7 +68,8 @@ struct MediaCoverage: Codable, Identifiable {
         imageURL = url
     }
     
-    struct Thumbnail: Codable {
+    struct Thumbnail: Identifiable, Codable {
+        let id: String
         let domain: String
         let basePath: String
         let key: String

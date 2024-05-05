@@ -34,13 +34,17 @@ class MediaCoverageService {
                 case .success(let data):
                     do {
                         let mediaCoverages = try JSONDecoder().decode([MediaCoverage].self, from: data)
+                        print("APK: MediaCoverage successfully Parsed!", #function)
                         // Cache the fetched media coverages
                         self.cacheService.cacheImage(data: data, for: "mediaCoverages")
+                        print("APK: MediaCoverage successfully Cached also!", #function)
                         completion(.success(mediaCoverages))
                     } catch {
+                        print("**** APK: Oops! MediaCoverage Parse Failed!***", #function)
                         completion(.failure(error))
                     }
                 case .failure(let error):
+                    print("**** APK: Oops! MediaCoverage network fetch Failed***", #function)
                     completion(.failure(error))
                 }
             }
