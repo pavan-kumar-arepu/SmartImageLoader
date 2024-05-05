@@ -32,7 +32,7 @@ import Foundation
      "publishedBy": "The New Indian Express"
    },
  */
-struct ImageModel: Codable, Identifiable {
+struct MediaCoverage: Codable, Identifiable {
     let id: String
     let title: String
     let imageURL: URL
