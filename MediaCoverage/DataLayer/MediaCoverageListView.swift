@@ -12,18 +12,16 @@ struct MediaCoverageListView: View {
     @ObservedObject var viewModel: MediaCoverageViewModel
     
     var body: some View {
-        List(viewModel.mediaCoverages, id: \.id) { mediaCoverage in
-            VStack(alignment: .leading) {
-                Text(mediaCoverage.title)
-                    .font(.headline)
-                Text(mediaCoverage.publishedBy)
-                    .font(.subheadline)
-                // Add more views to display additional media coverage details
+        ScrollView {
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 10) {
+                ForEach(viewModel.mediaCoverages) { mediaCoverage in
+                    MediaCoverageView(viewModel: viewModel, mediaCoverage: mediaCoverage)
+                }
+            }
+            .padding()
+            .onAppear {
+                viewModel.fetchMediaCoverages()
             }
         }
-        .onAppear {
-            viewModel.fetchMediaCoverages()
-        }
-        .padding()
     }
 }
