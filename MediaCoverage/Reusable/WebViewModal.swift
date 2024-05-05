@@ -21,17 +21,32 @@ struct WebView: UIViewRepresentable {
 }
 
 struct WebViewModal: View {
-    @Environment(\.presentationMode) var presentationMode
+    @State private var isLoading = true
+    @Binding var showModal: Bool
+
+    let url: URL
 
     var body: some View {
-        NavigationView {
-            WebView(url: URL(string: "https://acharyaprashant.org/")!)
-                .navigationBarTitle("Acharya Prashant", displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "xmark")
-                })
+        VStack {
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .padding()
+            } else {
+                WebView(url: url)
+            }
         }
+        .onAppear {
+            // Simulate some asynchronous task
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                isLoading = false
+            }
+        }
+        .navigationBarTitle(Text("WebView"), displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            showModal = false
+        }) {
+            Image(systemName: "xmark")
+        })
     }
 }

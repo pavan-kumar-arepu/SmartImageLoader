@@ -55,7 +55,7 @@ struct MediaCoverageListView: View {
             }
             .navigationBarTitle("Acharya Prashant", displayMode: .large)
             .sheet(isPresented: $isWebViewPresented) {
-                WebViewModal()
+                WebViewModal(showModal: $isWebViewPresented, url: URL(string: "https://acharyaprashant.org/")!)
             }
         }
     }
