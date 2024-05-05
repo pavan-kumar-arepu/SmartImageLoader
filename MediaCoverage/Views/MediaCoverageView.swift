@@ -31,7 +31,7 @@ struct MediaCoverageView: View {
             }
             .padding(8)
             .background(Color.blue.opacity(0.2))
-            .cornerRadius(8)
+            .cornerRadius(5)
         }
         .onAppear {
             viewModel.loadImage(for: mediaCoverage) { loadedImage in

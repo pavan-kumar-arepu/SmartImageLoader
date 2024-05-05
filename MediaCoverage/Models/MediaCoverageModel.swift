@@ -32,6 +32,18 @@ import Foundation
      "publishedBy": "The New Indian Express"
    },
  */
+
+/**
+*  MediaCoverage.swift
+*
+*  Represents a media coverage entity, adhering to the SOLID principles by following clear separation of concerns and single responsibility.
+*  It conforms to the Codable protocol for encoding and decoding, ensuring data interchangeability.
+*  The init(from decoder: Decoder) method handles decoding logic and constructs the imageURL using thumbnail data,
+*  demonstrating the open-closed principle by allowing extension without modification.
+*
+*  - Author: Arepu PavanKumar
+*/
+                                            
 struct MediaCoverage: Codable, Identifiable {
     let id: String
     let title: String
@@ -41,6 +53,7 @@ struct MediaCoverage: Codable, Identifiable {
     let publishedBy: String
     let thumbnail: Thumbnail
         
+    /// Keys for decoding media coverage data.
     enum CodingKeys: String, CodingKey {
         case id
         case title
@@ -51,6 +64,8 @@ struct MediaCoverage: Codable, Identifiable {
         case publishedBy
     }
     
+    /// Initializes a media coverage instance by decoding from the given decoder.
+    /// - Throws: An error if the decoding process fails.
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
@@ -71,6 +86,7 @@ struct MediaCoverage: Codable, Identifiable {
         imageURL = url
     }
     
+    /// Represents the thumbnail data for the media coverage.
     struct Thumbnail: Identifiable, Codable {
         let id: String
         let domain: String

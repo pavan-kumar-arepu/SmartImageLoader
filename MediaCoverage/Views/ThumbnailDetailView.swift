@@ -30,6 +30,9 @@ struct ThumbnailDetailView: View {
                               .frame(height: 200)
                       }
             
+            Divider() // Add a horizontal divider
+
+            
             // Display other details
             Text(mediaCoverage.title)
                 .font(.title)

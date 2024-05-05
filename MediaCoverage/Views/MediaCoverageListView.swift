@@ -42,6 +42,11 @@ struct MediaCoverageListView: View {
                                 .padding(),
                             alignment: .topTrailing
                         )
+                    
+                    Spacer();Spacer();Spacer();
+
+                    Divider() // Add a divider
+                    
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 10) {
                         ForEach(viewModel.mediaCoverages) { mediaCoverage in
                             MediaCoverageView(viewModel: viewModel, mediaCoverage: mediaCoverage)
