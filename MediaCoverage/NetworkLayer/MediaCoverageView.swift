@@ -38,3 +38,16 @@ struct MediaCoverageView: View {
         }
     }
 }
+
+
+//struct MediaCoverageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let viewModel = MediaCoverageViewModel()
+//        let mediaCoverage = MediaCoverage(id: "1", title: "Sample Title", imageURL: URL(string: "https://someAPKURL")!, publishedAt: Date(), publishedBy: "Publisher", thumbnail: MediaCoverage.Thumbnail(id: "1", domain: "https://APK.com", basePath: "images", key: "image.jpg"))
+//
+//        return MediaCoverageView(viewModel: viewModel, mediaCoverage: mediaCoverage)
+//            .previewLayout(.sizeThatFits)
+//            .padding()
+//            .background(Color.gray.opacity(0.2))
+//    }
+//}
