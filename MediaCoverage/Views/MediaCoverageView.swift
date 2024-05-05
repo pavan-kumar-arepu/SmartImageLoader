@@ -14,7 +14,7 @@ struct MediaCoverageView: View {
     @State private var image: UIImage?
 
     var body: some View {
-        NavigationLink(destination: ThumbnailDetailView(mediaCoverage: mediaCoverage)) {
+        NavigationLink(destination: ThumbnailDetailView(mediaCoverage: mediaCoverage, image: image)) {
             VStack(alignment: .leading, spacing: 8) {
                 if let image = image {
                     Image(uiImage: image)
