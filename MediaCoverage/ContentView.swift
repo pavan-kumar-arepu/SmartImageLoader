@@ -7,13 +7,22 @@
 
 import SwiftUI
 
+/**
+ The `ContentView` is the main entry point of the application, responsible for initializing the view model and displaying the UI.
+ 
+ - Author: Arepu Pavan Kumar
+ */
 struct ContentView: View {
     @ObservedObject var viewModel: MediaCoverageViewModel
+    
+    /**
+     Initializes the ContentView with a MediaCoverageViewModel.
      
-     init(viewModel: MediaCoverageViewModel) {
-         self.viewModel = viewModel
-     }
-     
+     - Parameter viewModel: An instance of MediaCoverageViewModel used to manage data and business logic.
+     */
+    init(viewModel: MediaCoverageViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         VStack {
@@ -22,6 +31,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 /*
 struct ContentView_Previews: PreviewProvider {
