@@ -36,7 +36,7 @@ struct MediaCoverage: Codable, Identifiable {
     let id: String
     let title: String
     let imageURL: URL
-    let publishedAt: Date
+    let publishedAt: String
     let publishedBy: String
     let thumbnail: Thumbnail
         
@@ -53,7 +53,7 @@ struct MediaCoverage: Codable, Identifiable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
-        publishedAt = try container.decode(Date.self, forKey: .publishedAt)
+        publishedAt = try container.decode(String.self, forKey: .publishedAt)
         publishedBy = try container.decode(String.self, forKey: .publishedBy)
         
         // Decode thumbnail directly from the container

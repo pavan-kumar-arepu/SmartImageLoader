@@ -30,6 +30,8 @@ class NetworkManager: NetworkService {
                 return
             }
             print("APK: Data Received", #function)
+            let jsonData = String(data: data, encoding: .utf8) ?? ""
+            print("APK: Data", jsonData)
             completion(.success(data))
         }.resume()
     }
