@@ -28,15 +28,20 @@ class MediaCoverageService {
             }
             
             // If not found in cache, fetch from API
-            // TODO: Will create constants file later..to keep all app constants in single file
-            self.networkService.fetchData(from: URL(string: "https://acharyaprashant.org/api/v2/content/misc/media-coverages?limit=100")!) { result in
+            
+            var url: URL = URL(string: "https://acharyaprashant.org/api/v2/content/misc/media-coverages?limit=5")!
+            if let formatedURL = URL(string: Constants.serverURL + "?limit=\(Constants.limit)") {
+                url = formatedURL
+            }
+                        
+            self.networkService.fetchData(from: url) { result in
                 switch result {
                 case .success(let data):
                     do {
                         let mediaCoverages = try JSONDecoder().decode([MediaCoverage].self, from: data)
                         print("APK: MediaCoverage successfully Parsed!", #function)
                         // Cache the fetched media coverages
-                        self.cacheService.cacheImage(data: data, for: "mediaCoverages")
+                        self.cacheService.cacheImage(data: data, for: Constants.mediaCoverages)
                         print("APK: MediaCoverage successfully Cached also!", #function)
                         completion(.success(mediaCoverages))
                     } catch {
