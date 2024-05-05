@@ -5,8 +5,6 @@
 //  Created by Pavankumar Arepu on 05/05/24.
 //
 
-import SwiftUI
-import WebKit
 
 /**
  *  WebViewModal..swift
@@ -17,6 +15,9 @@ import WebKit
  *
  *  - Author: Arepu PavanKumar
  */
+
+import SwiftUI
+import WebKit
 
 struct WebView: UIViewRepresentable {
     let url: URL

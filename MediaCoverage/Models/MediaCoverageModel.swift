@@ -5,6 +5,17 @@
 //  Created by Pavankumar Arepu on 04/05/24.
 //
 
+/**
+*  MediaCoverage.swift
+*
+*  Represents a media coverage entity, adhering to the SOLID principles by following clear separation of concerns and single responsibility.
+*  It conforms to the Codable protocol for encoding and decoding, ensuring data interchangeability.
+*  The init(from decoder: Decoder) method handles decoding logic and constructs the imageURL using thumbnail data,
+*  demonstrating the open-closed principle by allowing extension without modification.
+*
+*  - Author: Arepu PavanKumar
+*/
+
 import Foundation
 
 /* Sample JSON for creating the Model
@@ -32,17 +43,6 @@ import Foundation
      "publishedBy": "The New Indian Express"
    },
  */
-
-/**
-*  MediaCoverage.swift
-*
-*  Represents a media coverage entity, adhering to the SOLID principles by following clear separation of concerns and single responsibility.
-*  It conforms to the Codable protocol for encoding and decoding, ensuring data interchangeability.
-*  The init(from decoder: Decoder) method handles decoding logic and constructs the imageURL using thumbnail data,
-*  demonstrating the open-closed principle by allowing extension without modification.
-*
-*  - Author: Arepu PavanKumar
-*/
                                             
 struct MediaCoverage: Codable, Identifiable {
     let id: String
