@@ -35,6 +35,7 @@ import Foundation
 struct MediaCoverage: Codable, Identifiable {
     let id: String
     let title: String
+    let language: String
     let imageURL: URL
     let publishedAt: String
     let publishedBy: String
@@ -43,6 +44,7 @@ struct MediaCoverage: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id
         case title
+        case language
         case imageURL = "coverageURL"
         case thumbnail
         case publishedAt
@@ -53,6 +55,7 @@ struct MediaCoverage: Codable, Identifiable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
+        language = try container.decode(String.self, forKey: .language)
         publishedAt = try container.decode(String.self, forKey: .publishedAt)
         publishedBy = try container.decode(String.self, forKey: .publishedBy)
         
