@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Media Coverage App(SpiritualTeacher) is a Swift-based native iOS application designed to display a grid of media coverage images fetched from a remote API. 
+The Media Coverage App(SpiritualTeacher) is a Swift-based native iOS application designed to display a grid of media coverage images(of "Acharya Prashanth" Garu) fetched from a remote API. 
 The app features asynchronous image loading, caching mechanisms, and graceful error handling, and adheres to SOLID principles for robust and maintainable code.
 
 ## Screenshots in the flow of expected/run/play with App
