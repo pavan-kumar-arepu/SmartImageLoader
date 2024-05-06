@@ -53,9 +53,10 @@ The architecture of the Media Coverage App follows a Model-View-ViewModel (MVVM)
 2. **View:** Displays the user interface elements. Includes views such as `MediaCoverageListView` and `MediaCoverageView`.
 3. **ViewModel:** Acts as an intermediary between the view and model layers. Includes the `MediaCoverageViewModel` class responsible for fetching and managing media coverages.
 
-## High-Level Diagram
+## High-Level Diagram [Will Attache Screenshot Shortly]
 
 ![High Level Diagram](/path/to/high_level_diagram.png)
+
 
 The high-level diagram illustrates the communication flow between components in the Media Coverage App.
 
@@ -75,19 +76,19 @@ The Media Coverage App adheres to the SOLID principles as follows:
 Ex: Views
 - **Open/Closed Principle (OCP):** The app is open for extension but closed for modification, allowing new features to be added without altering existing code.
 Ex: Entity Class
-- **Liskov Substitution Principle (LSP):** The use of protocols and abstractions enables substitution of different implementations without affecting the behavior of the system.
+- **Liskov Substitution Principle (LSP):** The use of protocols and abstractions enables the substitution of different implementations without affecting the behavior of the system.
 Ex: Created Protocols which can be used for future
 - **Interface Segregation Principle (ISP):** Interfaces are kept small and focused, avoiding unnecessary dependencies and promoting decoupling between components.
-Ex: Yes, Created Protocols as small as possbile, so that they can utised by many other classes in future 
+Ex: Yes, Created Protocols as small as possible, so that they can utilized by many other classes in the future 
 - **Dependency Inversion Principle (DIP):** High-level modules (e.g., view models) depend on abstractions (protocols), not concrete implementations, facilitating easier testing and maintenance.
-Ex: Yes, in VM follows clear DIP principle and also protocols make sure, they did not provice any implemantion, it just abstrations. 
+Ex: Yes, VM follows clear DIP principles and also protocols to make sure, they did not provide any improvement, it just abstrations. 
 
 ## How to Use
 
 1. Clone the repository to your local machine.
 2. Open the project in Xcode.
 3. Build and run the app on a simulator or device.
-4. Follow the screenshots sequence to experience the app. 
+4. Follow the screenshot sequence to experience the app. 
 
 ## Credits
 
