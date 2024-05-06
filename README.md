@@ -4,33 +4,41 @@
 ## Overview
 
 The Media Coverage App(SpiritualTeacher) is a Swift-based native iOS application designed to display a grid of media coverage images fetched from a remote API. 
-The app features asynchronous image loading, caching mechanisms, graceful error handling, and adheres to SOLID principles for robust and maintainable code.
+The app features asynchronous image loading, caching mechanisms, and graceful error handling, and adheres to SOLID principles for robust and maintainable code.
 
-## Screenshots in the flow of exuecte/run/play with App
+## Screenshots in the flow of expected/run/play with App
 
 Step1: (Guest will Click on App - "SpiritualTeacher")
+
 ![AppName](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/d50adb34-654a-459b-9a8f-94b859a14dd1)
 
-Step2: (Guest will land on Landing Page where Thumbnail start loading by itself)
+Step2: (Guest will land on Landing Page where Thumbnail starts loading by itself)
+
 ![LandingPage](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/e3a18ff6-3eed-4815-a100-6c1ebef400f9)
 
-Step4: (Guest can scroll up veryfast to check, if screen is hangging while loading image or image are nicely loading..)
+Step 3: (The guest can scroll up very fast to check if the screen is hanging while loading images or images are nicely loading..)
+
 ![Scrollup1](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/1c2ab194-8fb6-4d0d-84fa-74ec41eb9827)
 
-Step4: (Guest can scroll up or down to check, if screen is hangging or loading image nicely..)
+Step 4: (The guest can scroll up or down to check if the screen is hanging or loading the image nicely..)
+
 ![Scrollup2](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/aeb945b0-086f-4207-bb38-1b452091cc9a)
 
-Note: The following steps are Additional/Bonus Implementation(which is not necessary as per the requirement), but implemnted to have fullfledged app look and feel.
-Step5: (Guest can tap on Meditaion icon which is there right top corner of "AchayraPrashant" image on landing page
+Note: The following steps are Additional/Bonus Implementation(which is not necessary as per the requirement), but implemented to have a full-fledged app look and feel.
+Step5: (The guest can tap on the Meditation icon which is in the right top corner of the "AchayraPrashant" image on the landing page
+
 ![TapOnMeditationIcon](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/88b7ca15-b89a-4220-9bd0-8956af625162)
 
-Step6: (Once user tap on MeditaionIcon, app will open a webView, which will show loading indicator as its couple of seconds to load website of "AcharyaPrashath".
+Step 6: (Once the user taps on MeditaionIcon, the app will open a web view, which will show a loading indicator in a couple of seconds to load the website of "AcharyaPrashath".
+
 ![WebPageLoading](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/f99683b7-b03d-4dee-874d-24b62a9ee4fc)
 
-Step7: (Once user tap on MeditaionIcon, app will open a webView, which will show loading indicator as its couple of seconds to load website of "AcharyaPrashath".
+Step7: (Once the user taps on MeditaionIcon, the app will open a webView, which will show a loading indicator as its a couple of seconds to load the website of "AcharyaPrashath".
+
 ![WebPageOpened](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/711dbd1f-0754-46bb-9387-cf394cdc288f)
 
-Step8: (Guest can go back to landing page and tap on Thumbnails to see how it will load in detail page, here we are passing the data nicely to detail screen.
+Step 8: (Guest can go back to the landing page and tap on Thumbnails to see how it will load on the detail page, here we are passing the data nicely to the detail screen.
+
 ![TapOnThumbnail3](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/40ec1842-f4f4-4226-bc57-e1dce069de7e)
 ![TaponThumbnail2](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/d64c95e7-9d7d-483e-b307-84d4bf015e76)
 ![TapOnThumbnail1](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/337d6b29-4c9e-4426-9895-aa8c13492f6d)
