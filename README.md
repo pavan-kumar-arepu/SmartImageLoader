@@ -53,12 +53,14 @@ The architecture of the Media Coverage App follows a Model-View-ViewModel (MVVM)
 2. **View:** Displays the user interface elements. Includes views such as `MediaCoverageListView` and `MediaCoverageView`.
 3. **ViewModel:** Acts as an intermediary between the view and model layers. Includes the `MediaCoverageViewModel` class responsible for fetching and managing media coverages.
 
-## High-Level Diagram [Will Attache Screenshot Shortly]
+## Sequence Diagram
 
-![High Level Diagram](/path/to/high_level_diagram.png)
+The Sequence diagram illustrates the communication flow between components in the Media Coverage App.
 
 
-The high-level diagram illustrates the communication flow between components in the Media Coverage App.
+![MediaCoverage_AcharyaPrashanth_SequenceDiagram](https://github.com/pavan-kumar-arepu/SmartImageLoader/assets/13812858/0789d591-2a98-4c3b-9dfb-1e994686d82d)
+
+
 
 ## Technologies and Frameworks
 
