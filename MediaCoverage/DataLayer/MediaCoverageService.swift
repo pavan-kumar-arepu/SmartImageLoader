@@ -55,8 +55,7 @@ class MediaCoverageService: MediaCoverageServiceProtocol {
     func fetchMediaCoverages(completion: @escaping (Result<[MediaCoverage], Error>) -> Void) {
         // Try to fetch media coverages from cache first
         cacheService.getImage(for: "mediaCoverages") { data in
-//            let jsonData = String(data: data!, encoding: .utf8) ?? ""
-//            print("££££ APK: ", jsonData)
+
 
             if let data = data,
                let mediaCoverages = try? JSONDecoder().decode([MediaCoverage].self, from: data) {
