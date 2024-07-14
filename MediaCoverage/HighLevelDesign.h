@@ -41,29 +41,3 @@ Error Handling: Implement error handling to gracefully handle network errors and
  
 */
 
-
-/* Sample Response
- {
-     "id": "coverage-4de2b2",
-     "title": "Redefining Feminism",
-     "language": "english",
-     "thumbnail": {
-       "id": "img-c7d089b3-8be2-4b25-acdd-25b50a1d683b",
-       "version": 1,
-       "domain": "https://cimg.acharyaprashant.org",
-       "basePath": "images/img-c7d089b3-8be2-4b25-acdd-25b50a1d683b",
-       "key": "image.jpg",
-       "qualities": [
-         10,
-         20,
-         30,
-         40
-       ],
-       "aspectRatio": 1
-     },
-     "mediaType": 2,
-     "coverageURL": "https://cimg.acharyaprashant.org/images/img-c547ce54-1ab5-4cbb-989c-9186f663954e/40/image.jpg",
-     "publishedAt": "2024-04-26",
-     "publishedBy": "The New Indian Express"
-   },
- */
