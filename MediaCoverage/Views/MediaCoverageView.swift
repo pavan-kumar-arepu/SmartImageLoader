@@ -15,7 +15,7 @@ import SwiftUI
  *  - Author: Arepu Pavan Kumar
  */
 
-import SwiftUI
+import APKNetworkTracker
 
 /// Represents a view displaying a media coverage item, including an image and details, with navigation to a detailed view.
 struct MediaCoverageView: View {
@@ -35,6 +35,9 @@ struct MediaCoverageView: View {
     var body: some View {
         NavigationLink(destination: ThumbnailDetailView(mediaCoverage: mediaCoverage, image: image)) {
             VStack(alignment: .leading, spacing: 8) {
+                
+//                APKNetworkTracker.API
+                
                 // Display image or loading indicator
                 if let image = image {
                     Image(uiImage: image)

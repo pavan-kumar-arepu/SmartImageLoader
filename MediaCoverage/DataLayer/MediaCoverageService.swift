@@ -55,6 +55,9 @@ class MediaCoverageService: MediaCoverageServiceProtocol {
     func fetchMediaCoverages(completion: @escaping (Result<[MediaCoverage], Error>) -> Void) {
         // Try to fetch media coverages from cache first
         cacheService.getImage(for: "mediaCoverages") { data in
+//            let jsonData = String(data: data!, encoding: .utf8) ?? ""
+//            print("££££ APK: ", jsonData)
+
             if let data = data,
                let mediaCoverages = try? JSONDecoder().decode([MediaCoverage].self, from: data) {
                 completion(.success(mediaCoverages))
@@ -62,13 +65,16 @@ class MediaCoverageService: MediaCoverageServiceProtocol {
             }
             
             // If not found in cache, fetch from API
-            
             var url: URL = URL(string:  Constants.serverURL )!
+
             if let formattedURL = URL(string: Constants.serverURL + "?limit=\(Constants.limit)") {
                 url = formattedURL
             }
             
+            
             self.networkService.fetchData(from: url) { result in
+                print(url)
+
                 switch result {
                 case .success(let data):
                     do {
@@ -84,7 +90,9 @@ class MediaCoverageService: MediaCoverageServiceProtocol {
                         completion(.success(mediaCoverages))
                     } catch {
                     #if DEBUG
-                        print("**** APK: Oops! MediaCoverage parse failed! ***", #function)
+                        let jsonData = String(data: data, encoding: .utf8) ?? ""
+                        
+                        print("**** APK: Oops! MediaCoverage parse failed! ***", #function, jsonData)
                     #endif
                         completion(.failure(error))
                     }

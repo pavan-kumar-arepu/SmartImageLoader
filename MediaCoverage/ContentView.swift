@@ -5,29 +5,40 @@
 //  Created by Pavankumar Arepu on 04/05/24.
 //
 
-import SwiftUI
-
 /**
  The `ContentView` is the main entry point of the application, responsible for initializing the view model and displaying the UI.
  
  - Author: Arepu Pavan Kumar
  */
+
+import SwiftUI
+import APKNetworkTracker // Import your package module
+
 struct ContentView: View {
     @ObservedObject var viewModel: MediaCoverageViewModel
     
-    /**
-     Initializes the ContentView with a MediaCoverageViewModel.
-     
-     - Parameter viewModel: An instance of MediaCoverageViewModel used to manage data and business logic.
-     */
     init(viewModel: MediaCoverageViewModel) {
         self.viewModel = viewModel
     }
     
+    @State private var isModalPresented = false
+    
     var body: some View {
         VStack {
-            // Use MediaCoverageListView with ViewModel
-            MediaCoverageListView(viewModel: MediaCoverageViewModel())
+            MediaCoverageListView(viewModel: viewModel)
+                .onTapGesture(count: 2) {
+                    APITracker.showAPICallModal()
+                }
+        }
+        .sheet(isPresented: $isModalPresented) {
+            APICallModalView()
+        }
+        .onAppear {
+            APITracker.isTrackingEnabled = true
+            APITracker.startTracking()
+        }
+        .onDisappear {
+            APITracker.stopTracking()
         }
     }
 }

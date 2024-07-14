@@ -40,6 +40,7 @@ class ImageLoader {
     ///   - url: The URL from which to load the image.
     ///   - completion: A closure to be executed upon completion of the image loading operation, containing a result with either the loaded UIImage or an error.
     func loadImage(from url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+        print("ImageURL", url)
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
